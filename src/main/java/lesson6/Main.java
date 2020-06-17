@@ -1,14 +1,17 @@
 package lesson6;
 
-/**
- * Написать метод, которому в качестве аргумента передается не пустой одномерный целочисленный массив.
- * Метод должен вернуть новый массив, который получен путем вытаскивания
- * из исходного массива элементов, идущих после последней четверки.
- * Входной массив должен содержать хотя бы одну четверку,
- * иначе в методе необходимо выбросить RuntimeException.
- * Написать набор тестов для этого метода (по 3-4 варианта входных данных).
- * Вх: [ 1 2 4 4 2 3 4 1 7 ] -> вых: [ 1 7 ].
- */
+import java.util.Arrays;
+import org.apache.log4j.Logger;
+
+
+
+
 public class Main {
-// Совсем не было времени. В течении недели пришлю Вам ДЗ.
+  // Совсем не было времени. В течении недели пришлю Вам ДЗ.
+  private static final org.apache.log4j.Logger log = Logger.getLogger(Main.class);
+  public static void main(String[] args) {
+    ArrayUtils arrayUtils = new ArrayUtils();
+    log.info(Arrays.toString(arrayUtils.after4NumberExtractor(new Integer[]{1, 2, 3, 9, 5, 8, 7,
+        1})));
+  }
 }
